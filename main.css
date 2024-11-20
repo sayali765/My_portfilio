@@ -1,0 +1,805 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, #f66495, #000000, #010908);
+    background-color: transparent;
+}
+
+.logo {
+    padding: 0 5rem;
+}
+
+.logo .logo-heading {
+    color: #fff;
+}
+
+.menu {
+    padding: 0 5rem;
+}
+
+.hamburger {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.cross-icon {
+    display: none;
+}
+
+/* .menu .menu-list {
+    display: flex;
+    list-style: none;
+    c
+}
+
+.menu-list .menu-list-items {
+    padding: 0.5rem 1rem;
+} */
+
+@media screen and (min-width: 856px) and (max-width: 1024px) {
+    .menu-list .menu-list-items {
+        padding: 0.5rem 0.3rem;
+    }
+}
+
+/* Main Hero Section Styles */
+.hero {
+    background-image: url('./Images/heroImg3.avif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 4.8rem 0;
+}
+
+.hero .intro {
+    text-align: center;
+    margin: 0 5rem;
+}
+
+.hero .intro-buttons {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+   /* Root colors for smooth, colorful design */
+:root {
+    --primary-gradient: linear-gradient(135deg, #f44990, #f097a1); /* Main gradient */
+    --secondary-gradient: linear-gradient(135deg, #eff4eb, #efecea); /* Accent gradient */
+    --tertiary-gradient: linear-gradient(135deg, #c8d8e4, #d9e4f5); /* Supporting gradient */
+    --text-dark: #333; /* General dark text */
+    --text-light: #fff; /* Light text for contrast */
+    --hover-brightness: 1.2; /* Hover brightness adjustment */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Neutral background for balance */
+    margin: 0;
+    padding: 20px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* About Section Paragraph */
+p {
+    background: var(--primary-gradient);
+    color: var(--text-light);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px var(--shadow-color);
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for the paragraph */
+p:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/* Highlight strong text */
+p strong {
+    color: #ffd700; /* Gold color for emphasis */
+    font-weight: bold;
+}
+
+/* About Info List */
+.about-info {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.about-info li {
+    display: flex;
+    justify-content: space-between;
+    background: var(--secondary-gradient);
+    color: var(--text-dark);
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for list items */
+.about-info li:hover {
+    transform: translateY(-4px);
+    background: var(--tertiary-gradient);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+/* Highlight the labels */
+.about-info li span:first-child {
+    font-weight: bold;
+    color: var(--text-light);
+    background: var(--primary-gradient);
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+/* Style for the second span in list */
+.about-info li span:last-child {
+    color: var(--text-dark);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .about-info li {
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-info li span {
+        margin-bottom: 5px;
+    }
+}
+
+/* Portfolio section styles */
+.portfolio {
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+
+.port-card {
+    padding: 0 !important;
+    background: none !important;
+    border: 2px solid #000;
+}
+
+.port-card .image {
+    width: 100%;
+}
+
+.port-card .image img {
+    height: 200px;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/* Services section styles */
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+
+.my-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.my-row .my-col {
+    text-align: center;
+    width: 30%;
+}
+
+.my-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C);
+    padding: 1rem;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #363D73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Contact section styles */
+.contact {
+    padding: 0 5rem;
+}
+
+.contact-content {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-between;
+}
+
+.contact-form-container {
+    width: 50%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-controls {
+    width: 80%;
+    padding: 10px 0;
+    margin: 1.67rem 0;
+}
+
+.contact-form .form-btn {
+    width: 83%;
+}
+
+.contact-details {
+    width: 50%;
+}
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f4f4f8, #e0e6ed);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.services {
+    padding: 40px 20px;
+    background-color: #f7f7f7; /* Background for the section */
+}
+
+.services-heading {
+    margin-bottom: 30px;
+}
+
+.services-heading h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #3d3d3d;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.my-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns the cards to the top */
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.my-col {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row, adjusts for gaps */
+    display: flex;
+    justify-content: center;
+}
+
+.my-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.my-card .team-photo {
+    width: 100%;
+    height: 200px;
+    background-image: url('../images/team/team_lead_photo.jpg'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.greet-heading {
+    font-size: 22px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.small-para {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #606060;
+    text-align: justify;
+}
+
+/* Remove the icon above each card */
+.my-card .icon {
+    display: none;
+}
+
+/* Ensure consistent height for cards */
+.my-card {
+    min-height: 500px; /* Adjust as needed to ensure equal height */
+}
+
+/* Make the cards align horizontally */
+.services-content {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent cards from wrapping */
+    overflow-x: auto; /* Add scroll if needed */
+}
+
+.my-col {
+    flex: 0 0 calc(33.333% - 20px); /* Fixed width for horizontal alignment */
+}
+/* General Styles for the Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.my-heading {
+    font-size: 36px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-form-container {
+    flex: 1 1 45%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-controls {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-controls:focus {
+    border-color: #007bff;
+}
+
+.form-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-details {
+    flex: 1 1 45%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.greet-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.details {
+    margin-bottom: 15px;
+}
+
+.contact-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.contact-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+/* General Styles for the Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.gallery-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.my-heading {
+    font-size: 36px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.gallery-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Styling for Images */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Styling for Videos */
+.gallery-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        padding: 30px 10px;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+}
+
+
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .my-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-col {
+        max-width: 90%;
+    }
+} */
+
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 50%;
+    background-color: #53C8B6;
+}
+
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu {
+    padding: 0 5rem;
+}
+
+.footer-menu .footer-menu-list {
+    display: flex;
+    list-style: none;
+}/* Container for the hero section */
+/* Flexbox layout for the container */
+.container {
+    display: flex;
+    justify-content: space-between; /* Left side content, right side image */
+    align-items: center; /* Center both vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    position: relative; /* Ensure the container's positioning allows for absolute positioning of the image */
+}
+
+/* Left side styles */
+.intro {
+    left: 0;
+    padding-left: 10px; /* Adjust this to move the text further from the image */
+}
+
+/* Right side for the vertical image */
+.right-side {
+    position: absolute;
+    right: 300px; 
+    margin-top: 90px;
+    top: 60%;
+
+    transform: translateY(-50%); /* Vertically center the image */
+}
+
+/* Style for the vertical image */
+.vertical-img {
+    position: relative;
+    height: 100vh; /* Adjust to 80% of viewport height */
+    object-fit: cover; /* Ensure image doesn't get distorted */
+    border-radius: 10px; /* Add subtle rounding to the corners */
+    top: 60%;
+    margin-right: 30px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+  
+}
+
+/* Text Animation */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titles fade in and out */
+#titles {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+/* Smart colors for greeting text */
+.smart-colors span:nth-child(1) { color: #FF5733; }
+.smart-colors span:nth-child(2) { color: #33FF57; }
+smart-colors span:nth-child(3) { color: #3357FF; }
+.smart-colors span:nth-child(4) { color: #F33FFF; }
+.smart-colors span:nth-child(5) { color: #57FF33; }
+
+/* Text Animation */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;   /* Animate letters */
+}
+
+/* Fading animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);   /* Slide up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titles fade in and out */
+#titles {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Smart colors for greeting text */
+.smart-colors span:nth-child(1) { color: #FF5733; }   /* H */
+.smart-colors span:nth-child(2) { color: #33FF57; }   /* E */
+.smart-colors span:nth-child(3) { color: #3357FF; }   /* L */
+.smart-colors span:nth-child(4) { color: #F33FFF; }   /* L */
+.smart-colors span:nth-child(5) { color: #57FF33; }   /* O */
+
+.links:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.links {
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.common-btn {
+    background-color: #35A99C;
+    color: #fff;
+    border: 2px solid #35A99C;
+    transition: all 0.25s;
+}
+
+.common-btn:hover {
+    background-color: #fff;
+    color: #35A99C;
+    border: 2px solid #35A99C;
+    outline: none;
+}
+
+.ghost-btn {
+    background-color: #fff;
+    color: #35A99C;
+    border: 2px solid #35A99C;
+    outline: none;
+}
+
+.ghost-btn:hover {
+    background-color: #35A99C;
+    color: #fff;
+    transition: all 0.25s;
+    border: 2px solid #35A99C;
+}
+
+.heading-span {
+    font-weight: bolder;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.small-para {
+    font-size: 14px;
+    color: #fff;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.blue-text {
+    color: #363D73;
+} 
